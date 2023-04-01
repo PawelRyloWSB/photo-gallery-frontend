@@ -25,6 +25,14 @@ const itemData = [
       img: 'https://mcdn.wallpapersafari.com/medium/67/18/19c6oD.jpg',
       title: 'Image 6',
     },
+    {
+      img: 'https://mcdn.wallpapersafari.com/medium/30/93/P7WdEX.jpg',
+      title: 'Image 7',
+    },
+    {
+      img: 'https://mcdn.wallpapersafari.com/medium/98/24/zJaTj7.jpg',
+      title: 'Image 8',
+    },
     // Add more items as needed
     
   ];
