@@ -1,14 +1,13 @@
-import React from 'react';
 import { createBrowserRouter } from "react-router-dom";
 import MainPage from "./components/MainPage";
-import FormPage from "./components/FormPage";
+import PhotoGalleryPage from "./components/PhotoGalleryPage";
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainPage />
     },
     {
-        path: "/form-page",
-        element: <FormPage />
+        path: "photo-gallery",
+        element: <PhotoGalleryPage />
     }
 ]);
