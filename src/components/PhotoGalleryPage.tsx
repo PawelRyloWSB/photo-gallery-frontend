@@ -58,7 +58,7 @@ function PhotoGalleryPage() {
 
             setPhotos(convertedPhotos);
         }).finally(() => {
-            setIsLoading(false);
+            setTimeout(() => {  setIsLoading(false); }, 200);
         })
     }
     const onSubmit = (data) => {
@@ -67,13 +67,15 @@ function PhotoGalleryPage() {
         reader.readAsArrayBuffer(file);
         reader.onload = () => {
             const buffer = reader.result;
-            console.log('widht', file.width, file.height)
             const formData = new FormData();
+
             formData.append('file', new Blob([buffer], { type: file.type }), file.name);
-            uploadPhoto(formData).then((response) => {
+            uploadPhoto(formData);
+
+            setTimeout(() => {
                 setIsModalOpen(false);
                 loadPhotos()
-            });
+            }, 200);
         }
     };
 
